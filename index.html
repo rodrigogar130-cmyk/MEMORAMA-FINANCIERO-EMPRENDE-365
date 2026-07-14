@@ -517,6 +517,207 @@
     text-align: left;
   }
 
+  .alias-modal {
+    max-width: 680px;
+    padding: 0;
+    text-align: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .alias-header {
+    padding: 26px 28px 18px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(77, 253, 250, 0.13), rgba(167, 139, 250, 0.08));
+    border-bottom: 1px solid rgba(77, 253, 250, 0.18);
+  }
+
+  .alias-header h2 { margin-bottom: 6px; }
+
+  .alias-header .msg {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .alias-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    color: var(--cyan);
+    border: 1px solid rgba(77, 253, 250, 0.32);
+    border-radius: 999px;
+    background: rgba(10, 14, 26, 0.45);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .alias-form {
+    padding: 22px 28px 0;
+  }
+
+  .play-guide {
+    margin: 18px 28px 0;
+    padding: 18px;
+    border: 1px solid rgba(77, 253, 250, 0.28);
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(77, 253, 250, 0.06), rgba(10, 14, 26, 0.45));
+  }
+
+  .guide-title {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 11px;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(77, 253, 250, 0.16);
+  }
+
+  .guide-mark {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--bg-deep);
+    background: var(--cyan);
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    box-shadow: var(--glow);
+  }
+
+  .guide-title h3 {
+    margin: 0;
+    color: var(--text);
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1.08rem;
+  }
+
+  .guide-title p {
+    margin: 2px 0 0;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .guide-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .guide-step {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 9px;
+    align-items: start;
+    padding: 12px;
+    min-height: 104px;
+    border: 1px solid rgba(77, 253, 250, 0.16);
+    border-radius: 8px;
+    background: rgba(10, 14, 26, 0.42);
+  }
+
+  .step-number {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--cyan);
+    background: rgba(77, 253, 250, 0.09);
+    border: 1px solid rgba(77, 253, 250, 0.28);
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .guide-step strong {
+    display: block;
+    color: var(--cyan);
+    font-size: 0.82rem;
+    margin-bottom: 3px;
+  }
+
+  .guide-step span:last-child {
+    color: var(--text-soft);
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .guide-facts,
+  .guide-scoring {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .guide-facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .guide-scoring {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .guide-fact,
+  .score-rule {
+    min-width: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(35, 43, 74, 0.55);
+    border: 1px solid rgba(77, 253, 250, 0.13);
+  }
+
+  .guide-fact strong,
+  .score-rule strong {
+    display: block;
+    color: var(--text);
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .guide-fact span,
+  .score-rule span {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-soft);
+    font-size: 0.7rem;
+    line-height: 1.25;
+  }
+
+  .score-rule strong { color: var(--success); }
+  .score-rule.miss strong { color: var(--danger); }
+  .score-rule.bonus strong { color: var(--violet); }
+
+  .alias-modal .actions {
+    padding: 0 28px 28px;
+  }
+
+  .alias-modal .btn.primary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  @media (max-width: 640px) {
+    .alias-header { padding: 24px 20px 16px; }
+    .alias-form { padding: 20px 20px 0; }
+    .play-guide { margin: 16px 20px 0; padding: 15px; }
+    .guide-steps,
+    .guide-facts,
+    .guide-scoring { grid-template-columns: 1fr; }
+    .guide-step { min-height: 0; }
+    .alias-modal .actions { padding: 0 20px 24px; }
+  }
+
   .modal .actions {
     margin-top: 20px;
     display: flex;
@@ -669,78 +870,6 @@
     text-shadow: 0 0 10px rgba(77, 253, 250, 0.3);
   }
 
-  /* Ranking */
-  .ranking { margin-top: 14px; text-align: left; }
-
-  .ranking .ranking-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 6px;
-    margin-bottom: 10px;
-  }
-
-  .ranking h3 {
-    margin: 0;
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    color: var(--cyan);
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-  }
-
-  .ranking .sync-note {
-    font-size: 0.7rem;
-    color: var(--text-soft);
-    margin-top: 6px;
-    text-align: center;
-    font-style: italic;
-  }
-
-  .ranking table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.88rem;
-  }
-
-  .ranking th, .ranking td {
-    padding: 8px 10px;
-    border-bottom: 1px solid rgba(77, 253, 250, 0.15);
-    text-align: left;
-  }
-
-  .ranking th {
-    background: var(--bg-deep);
-    color: var(--cyan);
-    font-weight: 600;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .ranking td { color: var(--text); }
-
-  .ranking tr.you td {
-    background: rgba(77, 253, 250, 0.08);
-    color: var(--cyan);
-    font-weight: 700;
-  }
-
-  .ranking .pos {
-    width: 34px;
-    text-align: center;
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-weight: 700;
-    color: var(--violet);
-  }
-
-  .ranking .empty {
-    text-align: center;
-    color: var(--text-soft);
-    font-style: italic;
-    padding: 12px;
-  }
-
   /* Instrucciones y crédito */
   .instructions {
     max-width: 900px;
@@ -883,12 +1012,12 @@
     <div class="grid" id="grid"></div>
     <div class="preview-banner" id="previewBanner" aria-live="polite">
       <div class="preview-label" id="previewLabel">Memoriza las cartas</div>
-      <div class="preview-count" id="previewCount">30</div>
+      <div class="preview-count" id="previewCount">60</div>
     </div>
   </section>
 
   <div class="instructions">
-    <strong>Cómo jugar:</strong> registra tu seudónimo y presiona <em>Jugar</em>. El juego se divide en <strong>2 rondas de 6 pares</strong> cada una (12 conceptos en total). Al iniciar cada ronda verás sus 12 cartas por <strong>30 segundos</strong> para memorizarlas. El cronómetro global de <strong>7 minutos</strong> arranca al inicio y no se detiene entre rondas ni durante la vista previa: completa las 12 parejas antes de que se agote.
+    <strong>Cómo jugar:</strong> registra tu seudónimo y presiona <em>Jugar</em>. El juego se divide en <strong>2 rondas de 6 pares</strong> cada una (12 conceptos en total). Al iniciar cada ronda verás sus 12 cartas por <strong>1 minuto</strong> para memorizarlas. El cronómetro global de <strong>7 minutos</strong> arranca al inicio y no se detiene entre rondas ni durante la vista previa: completa las 12 parejas antes de que se agote.
     <ul>
       <li>Acierto: <strong>+10 puntos</strong></li>
       <li>Fallo: <strong>−2 puntos</strong></li>
@@ -905,7 +1034,7 @@
     </div>
     <div>
       <button class="admin-link" id="adminPanelBtn" type="button">Ver registros de jugadores (admin)</button>
-      <button class="admin-link" id="adminResetBtn" type="button">Reiniciar ranking global (admin)</button>
+      <button class="admin-link" id="adminResetBtn" type="button">Reiniciar registros (admin)</button>
     </div>
   </footer>
 
@@ -913,19 +1042,64 @@
 
 <!-- Modal de registro de seudónimo -->
 <div class="overlay show" id="aliasOverlay">
-  <div class="modal">
-    <h2>Registro de jugador</h2>
-    <p class="msg">Ingresa tu seudónimo antes de comenzar.</p>
-    <label for="aliasInput">Seudónimo</label>
-    <input type="text" id="aliasInput" maxlength="20" autocomplete="off" placeholder="Ej. Empresa123" />
-    <div class="hint">Máximo 20 caracteres. Tu puntaje se guardará en el ranking de esta sesión.</div>
+  <div class="modal alias-modal">
+    <div class="alias-header">
+      <span class="alias-badge">Emprende 365</span>
+      <h2>Registro de jugador</h2>
+      <p class="msg">Ingresa tu seudónimo y revisa las reglas antes de comenzar.</p>
+    </div>
+
+    <div class="alias-form">
+      <label for="aliasInput">Seudónimo</label>
+      <input type="text" id="aliasInput" maxlength="20" autocomplete="off" placeholder="Ej. Empresa123" />
+      <div class="hint">Máximo 20 caracteres. Tu participación quedará registrada en esta sesión.</div>
+    </div>
+
+    <div class="play-guide" aria-labelledby="playGuideTitle">
+      <div class="guide-title">
+        <span class="guide-mark">?</span>
+        <div>
+          <h3 id="playGuideTitle">Cómo jugar</h3>
+          <p>Memoriza las cartas, encuentra cada concepto con su definición y suma puntos.</p>
+        </div>
+      </div>
+
+      <div class="guide-steps">
+        <div class="guide-step">
+          <span class="step-number">1</span>
+          <span><strong>Regístrate</strong> Escribe tu seudónimo y confirma el registro.</span>
+        </div>
+        <div class="guide-step">
+          <span class="step-number">2</span>
+          <span><strong>Memoriza</strong> Al iniciar cada ronda verás las cartas durante 1 minuto.</span>
+        </div>
+        <div class="guide-step">
+          <span class="step-number">3</span>
+          <span><strong>Empareja</strong> Une concepto y definición antes de que termine el tiempo.</span>
+        </div>
+      </div>
+
+      <div class="guide-facts" aria-label="Datos rápidos del juego">
+        <div class="guide-fact"><strong>2</strong><span>rondas</span></div>
+        <div class="guide-fact"><strong>6</strong><span>pares por ronda</span></div>
+        <div class="guide-fact"><strong>1 min</strong><span>para memorizar</span></div>
+        <div class="guide-fact"><strong>7 min</strong><span>tiempo total</span></div>
+      </div>
+
+      <div class="guide-scoring" aria-label="Sistema de puntuación">
+        <div class="score-rule"><strong>+10</strong><span>por acierto</span></div>
+        <div class="score-rule miss"><strong>-2</strong><span>por fallo</span></div>
+        <div class="score-rule bonus"><strong>+1/s</strong><span>bonus final</span></div>
+      </div>
+    </div>
+
     <div class="actions">
       <button class="btn primary" id="aliasBtn">Registrar y comenzar</button>
     </div>
   </div>
 </div>
 
-<!-- Modal final con resultados y ranking -->
+<!-- Modal final con resultados -->
 <div class="overlay" id="overlay">
   <div class="modal">
     <h2 id="modalTitle">¡Juego terminado!</h2>
@@ -936,25 +1110,6 @@
       <div><span class="label">Pares logrados</span><span class="value" id="finalPairs">0/12</span></div>
       <div><span class="label">Intentos</span><span class="value" id="finalTries">0</span></div>
       <div><span class="label">Tiempo usado</span><span class="value" id="finalTime">0:00</span></div>
-    </div>
-
-    <div class="ranking">
-      <div class="ranking-head">
-        <h3>🏆 Top 4 · Mejores resultados</h3>
-      </div>
-      <table id="rankingTable">
-        <thead>
-          <tr>
-            <th class="pos">#</th>
-            <th>Jugador</th>
-            <th>Puntaje</th>
-            <th>Tiempo</th>
-          </tr>
-        </thead>
-        <tbody id="rankingBody">
-          <tr><td colspan="4" class="empty">Aún no hay resultados.</td></tr>
-        </tbody>
-      </table>
     </div>
 
     <div class="actions">
@@ -987,7 +1142,7 @@
   <div class="modal wide">
     <h2>Panel de administrador</h2>
     <div class="admin-note">
-      Esto muestra el historial completo de partidas (no solo el top 4). Protegido con contraseña, pero recuerda que en un artefacto de navegador esto es una barrera de cortesía, no cifrado real: alguien con conocimientos técnicos podría consultar el almacenamiento directamente.
+      Esto muestra el historial completo de partidas. Protegido con contraseña, pero recuerda que en un artefacto de navegador esto es una barrera de cortesía, no cifrado real: alguien con conocimientos técnicos podría consultar el almacenamiento directamente.
     </div>
     <div class="actions" style="margin-bottom:12px;">
       <button class="btn small secondary" id="adminRefreshBtn">🔄 Actualizar</button>
@@ -1015,7 +1170,7 @@
   // ===== Configuración =====
   const CONFIG = {
     initialTime: 420,       // 7 minutos totales (cronómetro consecutivo entre rondas)
-    previewSeconds: 30,     // vista previa por cada ronda
+    previewSeconds: 60,     // vista previa por cada ronda
     pairsPerRound: 6,       // 6 pares (12 cartas) por ronda
     totalRounds: 2,         // 2 rondas para cubrir el pool de 12 conceptos
     pointsMatch: 10,
@@ -1102,7 +1257,6 @@
   const $finalPairs    = document.getElementById('finalPairs');
   const $finalTries    = document.getElementById('finalTries');
   const $finalTime     = document.getElementById('finalTime');
-  const $rankingBody   = document.getElementById('rankingBody');
   const $adminResetBtn = document.getElementById('adminResetBtn');
   const $adminPanelBtn  = document.getElementById('adminPanelBtn');
   const $adminOverlay   = document.getElementById('adminOverlay');
@@ -1144,7 +1298,7 @@
     return typeof k === 'string' ? k : (k && k.key ? k.key : String(k));
   }
 
-  // ===== Ranking local (localStorage) =====
+  // ===== Registros locales (localStorage) =====
   function sortEntries(list) {
     return list.slice().sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
@@ -1173,31 +1327,6 @@
 
   function clearLocalRanking() {
     try { localStorage.removeItem(CONFIG.localStorageKey); } catch (e) {}
-  }
-
-  function renderRankingTable(entries, currentAlias) {
-    $rankingBody.innerHTML = '';
-    if (!entries.length) {
-      $rankingBody.innerHTML = '<tr><td colspan="4" class="empty">Aún no hay resultados registrados.</td></tr>';
-      return;
-    }
-    const top4 = sortEntries(entries).slice(0, 4);
-    top4.forEach((r, i) => {
-      const tr = document.createElement('tr');
-      if (r.alias === currentAlias && r._isCurrent) tr.classList.add('you');
-      tr.innerHTML = `
-        <td class="pos">${i + 1}</td>
-        <td>${escapeHtml(r.alias)}</td>
-        <td>${r.score}</td>
-        <td>${formatTime(r.timeUsed)}</td>
-      `;
-      $rankingBody.appendChild(tr);
-    });
-  }
-
-  function refreshRankingDisplay(currentAlias) {
-    const entries = loadLocalRanking();
-    renderRankingTable(entries, currentAlias);
   }
 
   // ===== Acceso admin =====
@@ -1500,7 +1629,6 @@
     $finalPairs.textContent = `${matchedTotal}/${totalPairs}`;
     $finalTries.textContent = tries;
     $finalTime.textContent = formatTime(timeUsed);
-    $rankingBody.innerHTML = '<tr><td colspan="4" class="empty">Guardando puntaje…</td></tr>';
     $overlay.classList.add('show');
 
     const entry = {
@@ -1514,9 +1642,8 @@
     };
 
     entry._isCurrent = true;
-    const updated = submitScoreLocal(entry);
+    submitScoreLocal(entry);
     submittedKey = null;
-    renderRankingTable(updated, alias);
   }
 
   // ===== Registro de seudónimo =====
@@ -1555,11 +1682,10 @@
 
   $adminResetBtn.addEventListener('click', () => {
     if (!verifyAdminPassword()) return;
-    if (!confirm('¿Reiniciar el ranking local? Esta acción borra todos los puntajes guardados en este navegador y no se puede deshacer.')) return;
+    if (!confirm('¿Reiniciar los registros locales? Esta acción borra todos los puntajes guardados en este navegador y no se puede deshacer.')) return;
     clearLocalRanking();
-    if ($overlay.classList.contains('show')) refreshRankingDisplay(alias);
     if ($adminOverlay.classList.contains('show')) refreshAdminTable();
-    alert('Ranking reiniciado.');
+    alert('Registros reiniciados.');
   });
 
   $adminPanelBtn.addEventListener('click', () => {
@@ -1580,7 +1706,7 @@
     }
     const csv = toCSV(sortEntries(entries));
     const stamp = new Date().toISOString().slice(0, 10);
-    downloadCSV(csv, `memorama-financiero-ranking-${stamp}.csv`);
+    downloadCSV(csv, `memorama-financiero-registros-${stamp}.csv`);
   });
 
   $adminCloseBtn.addEventListener('click', () => {
